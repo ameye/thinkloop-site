@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 240" width="960" height="240" role="img" aria-label="ThinkLoop lockup">
+  <title>ThinkLoop — Think. Validate. Deploy.</title>
+
+  <!-- Icon (compact 208px version of logo.svg, shifted left) -->
+  <g transform="translate(16,16)">
+    <circle cx="104" cy="104" r="80" fill="none" stroke="#1B2A4A" stroke-width="22"/>
+    <path d="M 104 24 A 80 80 0 0 1 169 58" fill="none" stroke="#D4A843" stroke-width="22" stroke-linecap="round"/>
+    <path d="M 48 82 L 88 82 L 88 104 L 128 104 L 128 126 L 160 126"
+          fill="none" stroke="#2A9D8F" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="48" cy="82" r="9" fill="none" stroke="#D4A843" stroke-width="6"/>
+    <circle cx="88" cy="104" r="9" fill="none" stroke="#D4A843" stroke-width="6"/>
+    <circle cx="128" cy="126" r="9" fill="none" stroke="#D4A843" stroke-width="6"/>
+    <circle cx="160" cy="126" r="11" fill="#D4A843"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="228" y="118" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="88" font-weight="700" fill="#1B2A4A" letter-spacing="-2">ThinkLoop</text>
+
+  <!-- Tagline -->
+  <text x="232" y="172" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="30" font-weight="600" fill="#2A9D8F" letter-spacing="6">THINK · VALIDATE · DEPLOY</text>
+</svg>
