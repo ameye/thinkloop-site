@@ -126,14 +126,18 @@
   .evidence-list{display:grid;gap:16px;margin-top:44px}
   .evidence-item{
     background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px 28px;
-    display:grid;grid-template-columns:220px 1fr;gap:16px 32px;
+    display:grid;grid-template-columns:240px 1fr;gap:16px 32px;
   }
   .evidence-item .kind{font-size:12px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal)}
   .evidence-item h3{font-size:17px;margin-top:6px}
   .evidence-item p{font-size:14.5px;color:var(--muted)}
   .evidence-item b{color:var(--navy);font-weight:700}
+  .evidence-item .for{font-size:13px;color:var(--muted);margin-top:16px;line-height:1.4}
+  .evidence-item .for span{display:block;font-size:10.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--gold);margin-bottom:3px}
+  .evidence-item .copy p + p{margin-top:10px}
+  .evidence-item .copy{max-width:70ch}
   .evidence-note{margin-top:28px;font-size:13px;color:var(--muted);max-width:760px}
-  @media(max-width:760px){.evidence-item{grid-template-columns:1fr;gap:10px}}
+  @media(max-width:760px){.evidence-item{grid-template-columns:1fr;gap:10px}.evidence-item .for{margin-top:10px}}
 
   /* Approach */
   #approach{background:var(--navy);color:#D7DFEE}
@@ -144,6 +148,10 @@
   .approach-item h3{color:#fff;font-size:17px;margin-bottom:6px}
   .approach-item p{font-size:14.5px;color:#A8B4CC}
   .approach-item .ico{color:var(--gold);font-weight:800;margin-right:2px}
+  .approach-note{
+    margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);
+    font-size:14px;color:#A8B4CC;max-width:840px;
+  }
 
   /* Founder */
   .founder-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center;margin-top:40px}
@@ -200,6 +208,7 @@
     <nav class="nav-links">
       <a href="#loop">The Loop</a>
       <a href="#services">Services</a>
+      <a href="#evidence">Evidence</a>
       <a href="#approach">Approach</a>
       <a href="#founder">Founder</a>
       <a class="btn btn-primary nav-cta" href="#contact">Start a conversation</a>
@@ -301,14 +310,14 @@
         <div>
           <span class="vtag">Live platform</span>
           <h3>Vitalis, our own platform</h3>
-          <p>Vitalis is ThinkLoop's own agentic health platform, live at <a href="https://vitalis.thinkloop.org" target="_blank" rel="noopener">vitalis.thinkloop.org</a> on version 0.9.0 with 45 endpoints. It is multitenant: separate organisations run on one deployment, with their data held apart. Production ML and MLOps engagements are delivered on the back of it, so the practice in this card is one we run rather than one we recommend. The platform is public and open to inspection.</p>
+          <p>Vitalis is ThinkLoop's own agentic health platform, live at <a href="https://vitalis.thinkloop.org" target="_blank" rel="noopener">vitalis.thinkloop.org</a> on version 0.9.0 with 45 endpoints. It is multitenant: separate organisations run on one deployment, with their data held apart. Production ML and MLOps engagements are delivered on the back of it, so the practice in this card is one we run rather than one we recommend. The live service is publicly reachable.</p>
         </div>
         <a class="btn btn-ghost" href="https://vitalis.thinkloop.org" target="_blank" rel="noopener">Open Vitalis</a>
       </div>
       <div class="service">
         <span class="tag">Evidence</span>
         <h3>Healthcare Data Analytics &amp; Real-World Evidence</h3>
-        <p>NHANES, GBD, and EMR analytics; dashboards; real-world evidence generation; epidemiological studies with manuscript-ready outputs.</p>
+        <p>National survey, registry and appointment data analytics; dashboards; real-world evidence generation; epidemiological studies with manuscript-ready outputs.</p>
         <div class="service-foot">2–8 weeks · fixed scope</div>
       </div>
       <div class="service">
@@ -330,32 +339,108 @@
 <section id="evidence">
   <div class="container">
     <span class="eyebrow">Evidence</span>
-    <h2>Evidence of capability</h2>
-    <p class="lead">Three pieces of work, stated as case notes: what was asked, what we delivered, and what it produced.</p>
+    <h2>The work behind the services</h2>
+    <p class="lead">Eight pieces of work from our own build and research record, each placed under the service it supports. What matters is not the list but what each piece proves about how the work is done.</p>
     <div class="evidence-list">
+
       <div class="evidence-item">
         <div>
-          <div class="kind">Service access · Nigeria</div>
-          <h3>Hearing-healthcare access</h3>
+          <div class="kind">Live platform · multitenant</div>
+          <h3>Vitalis, our own health platform</h3>
+          <div class="for"><span>Service</span>Production ML / MLOps</div>
         </div>
-        <p><b>Asked</b> how hearing care was distributed across Nigeria. <b>Delivered</b> a national access model: 205.8 million people in 775 demand units mapped against 138 facilities, with the analysis rebuilt from source data and every figure checked independently.</p>
+        <div class="copy">
+          <p><b>What it is.</b> A conversational health platform, built across 74 modules, with a FHIR backend, a test suite and 45 endpoints, live at version 0.9.0. One deployment serves several organisations, each with its own agent, knowledge base and data boundary.</p>
+          <p><b>What it proves.</b> Production work is delivered on the back of a system we run ourselves. Tenancy isolation, integration and deployment are our daily practice, not a reference architecture we recommend and have never built.</p>
+        </div>
       </div>
+
       <div class="evidence-item">
         <div>
           <div class="kind">Clinical model · audiology</div>
-          <h3>Fuzzy Audiometric Index</h3>
+          <h3>Fuzzy audiometric classification</h3>
+          <div class="for"><span>Service</span>Model Development &amp; Clinical Validation</div>
         </div>
-        <p><b>Asked</b> whether a fuzzy inference system could assign a graded pure-tone audiometric class. <b>Delivered</b> an open-source Mamdani system, developed on 15,656 ears and tested on 3,912 held-out ears, that agreed with the WHO grade at weighted Cohen kappa 0.93.</p>
+        <div class="copy">
+          <p><b>What it is.</b> An open-source classifier that grades hearing loss from a pure-tone audiogram on a continuous scale rather than at fixed decibel cut-offs, developed and validated against NHANES audiometry and released under an MIT licence with a test suite, continuous integration and a Docker image.</p>
+          <p><b>What it proves.</b> A clinical model packaged for other people to install, run and check, with its limits written into the documentation. Validation is a deliverable, not a slide.</p>
+        </div>
       </div>
+
       <div class="evidence-item">
         <div>
-          <div class="kind">Rebuild · head and neck</div>
-          <h3>Registry analysis, three decades</h3>
+          <div class="kind">Evaluation · retrieval</div>
+          <h3>Retrieval over WHO ear and hearing guidance</h3>
+          <div class="for"><span>Service</span>Production ML / MLOps</div>
         </div>
-        <p><b>Asked</b> whether a three-decade head and neck cancer registry analysis would hold up. <b>Delivered</b> an independent rebuild from the registry extract, with every reported figure re-derived from source data and checked against the original.</p>
+        <div class="copy">
+          <p><b>What it is.</b> A question-answering service over ten WHO ear and hearing care documents, with an evaluation harness that runs eight retrieval configurations and records, for every run, what was retrieved, what was answered, faithfulness, relevance, whether each answer pointed at a real source, latency and token cost.</p>
+          <p><b>What it proves.</b> Performance is instrumented, not asserted. When we say a change helped, there is a run record behind the sentence, and the next change is measured the same way.</p>
+        </div>
       </div>
+
+      <div class="evidence-item">
+        <div>
+          <div class="kind">Geospatial · national</div>
+          <h3>Access to hearing care across Nigeria</h3>
+          <div class="for"><span>Service</span>Healthcare Data Analytics &amp; Real-World Evidence</div>
+        </div>
+        <div class="copy">
+          <p><b>What it is.</b> A road-network travel-time model covering 205.8 million people in 775 demand units and 138 facilities, giving population coverage at two and four hours, with a simulator for the access lost when individual facilities are disrupted.</p>
+          <p><b>What it proves.</b> National-scale data engineering turned into a planning instrument: where services actually reach people, and which facilities cannot be allowed to close.</p>
+        </div>
+      </div>
+
+      <div class="evidence-item">
+        <div>
+          <div class="kind">Federated learning · privacy</div>
+          <h3>Three sites, one model, no central server</h3>
+          <div class="for"><span>Service</span>Model Development &amp; Clinical Validation</div>
+        </div>
+        <div class="copy">
+          <p><b>What it is.</b> A federated learning stack in which three sites train one model with no central server, using pairwise masking, synchronous rounds and differential privacy, with a test suite and a run log for each experiment. It has been run on simulated site data, not on live site records.</p>
+          <p><b>What it proves.</b> A client who cannot pool patient data is not limited to a single-site model. The constraint is architectural, and the architecture has been built and tested.</p>
+        </div>
+      </div>
+
+      <div class="evidence-item">
+        <div>
+          <div class="kind">Survey analysis · fairness</div>
+          <h3>Twelve models, and who they serve less well</h3>
+          <div class="for"><span>Service</span>Healthcare Data Analytics &amp; Real-World Evidence</div>
+        </div>
+        <div class="copy">
+          <p><b>What it is.</b> A reproducible pipeline over 14,161 records from the Nigeria Demographic and Health Survey, comparing twelve models across ten imbalance strategies, with SHAP interpretation, subgroup fairness analysis and an interactive application.</p>
+          <p><b>What it proves.</b> Accuracy alone does not get signed off. We report where a model performs worse, for whom and by how much, before anyone depends on it.</p>
+        </div>
+      </div>
+
+      <div class="evidence-item">
+        <div>
+          <div class="kind">Operational analytics · appointments</div>
+          <h3>No-show risk and the policy it drives</h3>
+          <div class="for"><span>Service</span>Healthcare Data Analytics &amp; Real-World Evidence</div>
+        </div>
+        <div class="copy">
+          <p><b>What it is.</b> A no-show risk model for outpatient appointments, with a simulation of risk-based overbooking and reminder policies, packaged with the data request and ethics documentation needed to validate it on a clinic's own records.</p>
+          <p><b>What it proves.</b> The deliverable is a policy, not a score: analysis that changes booking rules and can then be tested against them.</p>
+        </div>
+      </div>
+
+      <div class="evidence-item">
+        <div>
+          <div class="kind">Evidence synthesis · registered</div>
+          <h3>A protocol fixed before the analysis</h3>
+          <div class="for"><span>Service</span>Clinical AI Strategy &amp; Feasibility</div>
+        </div>
+        <div class="copy">
+          <p><b>What it is.</b> A systematic review and network meta-analysis of the surgical and conservative management of otitis media with effusion in children, registered in PROSPERO as CRD420261501093 before any analysis, with ten documented search strategies and a screening record.</p>
+          <p><b>What it proves.</b> The question and the method are fixed in advance and open to inspection. A feasibility recommendation should rest on the evidence base, not on the answer someone was hoping for.</p>
+        </div>
+      </div>
+
     </div>
-    <p class="evidence-note">Client engagements are confidential and are described by site, not by name (Site A, Site B). Every deliverable is checked the same way as the work above: rebuilt from source data, figures re-derived, and results reconciled before handover.</p>
+    <p class="evidence-note">None of the work above is presented as a client engagement. It is our own platform, method and research record, shown because a claim about capability should be open to inspection.</p>
   </div>
 </section>
 
@@ -382,6 +467,7 @@
         <p>Peer-review discipline in everything: reproducible pipelines, honest metrics, no pipeline comparisons, no inflated claims.</p>
       </div>
     </div>
+    <p class="approach-note">Client engagements are confidential and are described by site, not by name: Site A, Site B, Site C. That is why no client logos appear anywhere on this page. The evidence above is our own platform and research record, shown precisely because the client work behind it cannot be.</p>
   </div>
 </section>
 
