@@ -1,0 +1,6 @@
+# robots.txt for thinkloop.org
+
+User-agent: *
+Allow: /
+
+Sitemap: https://thinkloop.org/sitemap.xml
